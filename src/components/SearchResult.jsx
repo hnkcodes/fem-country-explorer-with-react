@@ -9,9 +9,7 @@ export default function SearchResult() {
 
   const [filter, setFilter] = useState({ word: "", region: "" });
 
-  const { fetchedData, isError, isLoading } = useFetch(
-    "../../public/data.json",
-  );
+  const { fetchedData, isError, isLoading } = useFetch("/data.json");
 
   const handleCountryFilter = function (e, type) {
     if (type === "word") {
